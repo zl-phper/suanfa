@@ -9,13 +9,13 @@
 
 function removeRepectValue(&$nums){
 	$slow = 0;
-    $size = count($nums);
+    	$size = count($nums);
 	for($fast=0; $fast<$nums; $fast++){
 		if($slow <2 || $nums[$fast] != $nums[$slow - 2]){
 		$nums[$slow] = $nums[$fast];
 		$slow += 1;
 		}
-
+ 
 	}
 	return $slow;
 }
